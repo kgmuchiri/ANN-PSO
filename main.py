@@ -25,7 +25,7 @@ df_nrml[df.columns.difference(['concrete_compressive_strength'])] = scaler.fit_t
 #Displays the normalized data to verify
 df_nrml.head()
 #Create features and labels
-X = df_nrml.drop('concrete_compressive_strength', axis=1).valuesadd
+X = df_nrml.drop('concrete_compressive_strength', axis=1).values
 y = df_nrml['concrete_compressive_strength'].values
 #Split dataset into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)

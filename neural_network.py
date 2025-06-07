@@ -36,6 +36,8 @@ class NeuralNetwork:
             return np.tanh(x)
         elif function == "linear":
             return x
+        elif function == "softplus":
+            return np.log(1 + np.exp(x))
         else:
             raise ValueError("Invalid activation function input")
     
